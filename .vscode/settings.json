@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "sondeo_practicas",
+            "database": "sondeo_practicas",
+            "username": "postgres",
+            "password": "78787"
+        }
+    ]
+}
