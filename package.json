@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "jsdom": "^16.4.0",
+    "knex": "^0.21.14",
+    "pg": "^8.5.1",
     "puppeteer": "^5.5.0"
   }
 }
