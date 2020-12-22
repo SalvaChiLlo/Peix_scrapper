@@ -7,6 +7,7 @@ async function scrap() {
   try {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
+    await page.setDefaultNavigationTimeout(0);
     const response = await page.goto(
       "https://intranet.inf.upv.es/int/aplic_intranet/peixboot/alumnos/listado_ofertas_5_detalle.php"
     );
@@ -126,6 +127,7 @@ function getObservaciones(element, code) {
   else observacion = "";
   observacion = observacion
     .trim()
+    .toLowerCase()
     .replace("á", "a")
     .replace("à", "a")
     .replace("é", "e")
