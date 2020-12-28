@@ -28,7 +28,7 @@ function app() {
     );
   const data = scrap.scrap();
 
-  data.then((response) => {
+  data.then((response) => { 
     insertData(response)
   });
 
