@@ -1,5 +1,4 @@
 const scrap = require("./scrap");
-const analyze = require("./analyze");
 const database = require("knex")({
   client: "pg",
   connection: {
