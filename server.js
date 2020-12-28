@@ -3,7 +3,7 @@ const cors = require("cors");
 const database = require("knex")({
   client: "pg",
   connection: {
-    host: process.env.DATABASE_URL,
+    connectString: process.env.DATABASE_URL,
     ssl: true
   },
 });

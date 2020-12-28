@@ -2,10 +2,8 @@ const scrap = require("./scrap");
 const database = require("knex")({
   client: "pg",
   connection: {
-    host: "postgres://gxojsjqdznsveg:f850014133cf479b5b628004445235fe7d20c9302857b95c6f315e8044e2fe5a@ec2-18-211-171-122.compute-1.amazonaws.com:5432/d8gtoui997bn8c",
-    user: "gxojsjqdznsveg",
-    password: "f850014133cf479b5b628004445235fe7d20c9302857b95c6f315e8044e2fe5a",
-    database: "d8gtoui997bn8c",
+    connectString: process.env.DATABASE_URL,
+    ssl: true
   },
 });
 
