@@ -26,7 +26,9 @@ function startAnalyzing() {
     .where("analyzed", "=", "false")
     .then((response) => {
       analyze(response);
-      setTimeout(() => {}, 1000 * 60 * 60);
+      setTimeout(() => {
+        startAnalyzing();
+      }, 1000 * 60 * 60);
     });
 }
 
