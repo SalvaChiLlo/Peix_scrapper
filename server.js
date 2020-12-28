@@ -3,10 +3,10 @@ const cors = require("cors");
 const database = require("knex")({
   client: "pg",
   connection: {
-    host: "127.0.0.1",
-    user: "postgres",
-    password: process.env.DB_PASS,
-    database: "sondeo_practicas",
+    host: "ec2-18-211-171-122.compute-1.amazonaws.com",
+    user: "gxojsjqdznsveg",
+    password: "f850014133cf479b5b628004445235fe7d20c9302857b95c6f315e8044e2fe5a",
+    database: "d8gtoui997bn8c",
   },
 });
 
@@ -30,6 +30,6 @@ app.get("/remuneracion", function (req, res) {
     .then((response) => res.json(response.rows));
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("App is running in port 3000");
 });
