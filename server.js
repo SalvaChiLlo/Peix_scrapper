@@ -3,8 +3,10 @@ const cors = require("cors");
 const database = require("knex")({
   client: "pg",
   connection: {
-    connectString: "postgres://gxojsjqdznsveg:f850014133cf479b5b628004445235fe7d20c9302857b95c6f315e8044e2fe5a@ec2-18-211-171-122.compute-1.amazonaws.com:5432/d8gtoui997bn8c",
-    ssl: true
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false
+    }
   },
 });
 
