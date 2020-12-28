@@ -5,7 +5,12 @@ const fs = require("fs");
 scrap();
 async function scrap() {
   try {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+      ],
+    });
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(0);
     const response = await page.goto(
