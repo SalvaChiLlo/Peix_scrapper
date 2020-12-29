@@ -25,7 +25,7 @@ app.get("/", function (req, res) {
 app.get("/remuneracion", function (req, res) {
   database
     .raw(
-      "select company_name, avg(remuneracion::numeric) from oferta group by company_name"
+      "select company_name, avg(remuneracion) from oferta group by company_name"
     )
     .then((response) => res.json(response.rows));
 });
