@@ -9,7 +9,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['sondeo-practicas'],
+  app_name: ['sondeo-practicas-heroku'],
   /**
    * Your New Relic license key.
    */
