@@ -49,7 +49,7 @@ function insertData(data) {
         company_name: data[key].company_name,
         description: data[key].description,
         profile: data[key].profile,
-        observation: data[key].observation,
+        observation: data[key].observation, 
         inserted: new Date(),
       })
       .then((response) => {
