@@ -45,6 +45,7 @@ function insertData(data) {
       .insert({
         id: key,
         remuneracion: data[key].remuneracion,
+        horas: data[key].horas,
         company_name: data[key].company_name,
         description: data[key].description,
         profile: data[key].profile,
