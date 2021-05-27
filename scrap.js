@@ -27,6 +27,7 @@ async function scrap() {
     document.querySelectorAll("#div_contenido > div").forEach((element) => {
       const code = getOfferCode(element);
       const price = getPrice(element);
+      const hours = getHours(element);
       const companyName = getCompanyName(element);
       const description = getDescription(element, code);
       const profile = getProfile(element, code);
@@ -54,6 +55,16 @@ function getPrice(element) {
   price = price.match(/(\d+)/)[0];
 
   return price;
+}
+
+function getHours(element) {
+  let hour = element
+    .querySelector("div > div:nth-child(7) > div.col-xs-5.col-md-2 > center > p > b")
+    .textContent.trim();
+    hour = hour.match(/(\d+)/)[0];
+    console.log(hour);
+
+  return hour;
 }
 
 function getOfferCode(element) {
