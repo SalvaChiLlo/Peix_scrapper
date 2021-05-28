@@ -34,6 +34,7 @@ async function scrap() {
       const observacion = getObservaciones(element, code);
       res[code] = {
         remuneracion: price,
+        hours,
         company_name: companyName,
         description: description,
         profile: profile,
